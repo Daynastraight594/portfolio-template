@@ -50,6 +50,9 @@
   .card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(74, 158, 255, 0.1); }
   .card-icon { font-size: 1.8rem; margin-bottom: 12px; }
   .card-img { width: 100%; border-radius: 8px; margin-bottom: 14px; border: 1px solid var(--border); cursor: pointer; transition: transform 0.2s; }
+  .card-img.hidden { display: none; }
+  .card-icon.fallback { display: none; }
+  .card-img.hidden + .card-icon.fallback { display: block; }
   .card-img:hover { opacity: 0.9; }
 
   /* Lightbox */
@@ -180,8 +183,12 @@
 <h2 class="reveal" data-i18n="projects">Projects</h2>
 <div class="projects reveal">
 
+  <!-- Each card has an <img> that auto-hides if the file doesn't exist, showing the fallback icon instead.
+       To add a screenshot: just drop your image into the screenshots/ folder with the matching filename. -->
+
   <div class="card">
-    <div class="card-icon">&#128640;</div>
+    <img src="screenshots/project-one.jpg" alt="Project One" class="card-img" onerror="this.classList.add('hidden')">
+    <div class="card-icon fallback">&#128640;</div>
     <h3 data-i18n="p1t">Project One</h3>
     <div class="tech">React / Node.js / PostgreSQL</div>
     <p data-i18n="p1d">Describe your project here. What problem does it solve? What makes it interesting?</p>
@@ -189,7 +196,8 @@
   </div>
 
   <div class="card">
-    <div class="card-icon">&#128202;</div>
+    <img src="screenshots/project-two.jpg" alt="Project Two" class="card-img" onerror="this.classList.add('hidden')">
+    <div class="card-icon fallback">&#128202;</div>
     <h3 data-i18n="p2t">Project Two</h3>
     <div class="tech">Python / FastAPI / Docker</div>
     <p data-i18n="p2d">Describe your project here. What did you build and why? Highlight the technical challenges you solved.</p>
@@ -197,7 +205,8 @@
   </div>
 
   <div class="card">
-    <div class="card-icon">&#9881;&#65039;</div>
+    <img src="screenshots/project-three.jpg" alt="Project Three" class="card-img" onerror="this.classList.add('hidden')">
+    <div class="card-icon fallback">&#9881;&#65039;</div>
     <h3 data-i18n="p3t">Project Three</h3>
     <div class="tech">TypeScript / Express / Redis</div>
     <p data-i18n="p3d">Describe your project here. What architecture decisions did you make? What was the outcome?</p>
@@ -205,7 +214,8 @@
   </div>
 
   <div class="card">
-    <div class="card-icon">&#127912;</div>
+    <img src="screenshots/project-four.jpg" alt="Project Four" class="card-img" onerror="this.classList.add('hidden')">
+    <div class="card-icon fallback">&#127912;</div>
     <h3 data-i18n="p4t">Project Four</h3>
     <div class="tech">Vue.js / Firebase / Tailwind</div>
     <p data-i18n="p4d">Describe your project here. What impact did it have? Include metrics if possible.</p>
@@ -213,10 +223,6 @@
   </div>
 
 </div>
-
-<!-- To add screenshot images to project cards, replace the card-icon div with:
-     <img src="screenshots/your-image.jpg" alt="Project Name" class="card-img">
-     The lightbox will automatically work for any .card-img elements. -->
 
 <h2 class="reveal" data-i18n="beyond">Beyond Code</h2>
 <div class="projects" style="margin-bottom: 50px;">
